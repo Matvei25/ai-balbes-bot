@@ -3,10 +3,22 @@ import tensorflow as tf
 from tensorflow import keras
 from tensorflow.keras import layers
 
+# Группы символов
+char_groups = {
+    "russian": "абвгдежзийклмнопрстуфхцчшщъыьэюяАБВГДЕЖЗИЙКЛМНОПРСТУФХЦЧШЩЪЫЬЭЮЯ",
+    "english_espanol": "abcçdefghijklmnñopqrstuvwxyzABCÇDEFGHIJKLMNÑOPQRSTUVWXYZáéíóúÁÉÍÓÚ",
+    "empty": "",
+    "numbers": "0123456789",
+    "symbols": "!@#$%^&*()_+-=[]{}|;:'\",.<>?/`~",
+    "finance": "$£€¢₽₹¥₱₿",
+    "math": "+-*/=<>≠≤≥",
+    "science": "∞∑∏∫≡≠≈",
+    "programmer": "<>{}[]()#@&|\\"
+}
+
 # Подготовка данных
-# Для примера используем небольшой набор текстов
 texts = [
-    " abcçdefghijklmnñopqrstuvwxyz ABCÇDEFGHIJKLMNÑOPQRSTUVWXYZ абвгдеёжзийклмнопрстуфхцчшщъыьэюя АБВГДЕЁЖЗИЙКЛМНОПРСТУФХЦЧШЩЪЫЬЭЮЯ ¡!@#№$£€¢₽₹¥₱₿%^&()_[]{}:;'\\|/<>¿?,.· 0123456789 +-*=`~'ºª",
+    " abcçdefghijklmnñopqrstuvwxyz ABCÇDEFGHIJKLMNÑOPQRSTUVWXYZ абвгдеёжзийклмнопрстуфхцчшщъыьэюя АБВГДЕЁЖЗИЙКЛМНОПРСТУФХЦЧШЩЪЫЬЭЮЯ ¡!@#№$£€¢₽₹¥₱₿%^&()_[]{}:;'\\|/<>¿?,.· 0123456789 +-*=≠≤≥∞∑∏∫≡≈ `~ºª",
     "",
     "Привет, как дела?",
     "Я хорошо, спасибо!",
