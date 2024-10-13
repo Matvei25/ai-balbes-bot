@@ -6,7 +6,7 @@ from tensorflow.keras import layers
 # Группы символов
 char_groups = {
     "russian": "абвгдежзийклмнопрстуфхцчшщъыьэюяАБВГДЕЖЗИЙКЛМНОПРСТУФХЦЧШЩЪЫЬЭЮЯ",
-    "english_espanol": "abcçdefghijklmnñopqrstuvwxyzABCÇDEFGHIJKLMNÑOPQRSTUVWXYZáéíóúÁÉÍÓÚ",
+    "english": "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ",
     "empty": "",
     "numbers": "0123456789",
     "symbols": "!@#$%^&*()_+-=[]{}|;:'\",.<>?/`~",
@@ -18,7 +18,7 @@ char_groups = {
 
 # Подготовка данных
 texts = [
-    " abcçdefghijklmnñopqrstuvwxyz ABCÇDEFGHIJKLMNÑOPQRSTUVWXYZ áéíóú ÁÉÍÓÚ абвгдеёжзийклмнопрстуфхцчшщъыьэюя АБВГДЕЁЖЗИЙКЛМНОПРСТУФХЦЧШЩЪЫЬЭЮЯ ¡!@#№$£€¢₽₹¥₱₿%^&()_[]{}:;'\\|/<>¿?,.· 0123456789 +-*=≠≤≥∞∑∏∫≡≈ `~ºª",
+    " abcdefghijklmnopqrstuvwxyz ABCDEFGHIJKLMNOPQRSTUVWXYZ абвгдеёжзийклмнопрстуфхцчшщъыьэюя АБВГДЕЁЖЗИЙКЛМНОПРСТУФХЦЧШЩЪЫЬЭЮЯ ¡!@#№$£€¢₽₹¥₱₿%^&()_[]{}:;'\\|/<>¿?,.· 0123456789 +-*=≠≤≥∞∑∏∫≡≈ `~ºª",
     "",
     "Привет, как дела?",
     "Я хорошо, спасибо!",
@@ -76,34 +76,6 @@ texts = [
     "I usually say 'see you later!'",
     "How do you celebrate your birthday?",
     "I celebrate with friends and family.",
-    "¿Hola, cómo estás?",
-    "¡Estoy bien gracias!",
-    "¿Cuál es tu color favorito?"
-    "Me gusta el azul.",
-    "¿Qué te gusta hacer en tu tiempo libre?"
-    "Me encanta leer libros y ver películas.",
-    "¿A qué te dedicas?",
-    "Trabajo como programador.",
-    "¿Dónde vive?",
-    "Vivo en Moscú.",
-    "¿Cuál es tu pasatiempo?"
-    "Mi hobby es la fotografía.",
-    "¿Cuál es tu película favorita?"
-    "Mi película favorita es 'Interstellar'.",
-    "¿Cómo pasas tu fin de semana?"
-    "Me gusta caminar por el parque.",
-    "¿Qué opinas del clima de hoy?"
-    "¡El clima hoy es hermoso y soleado!",
-    "¿Tienes mascotas?"
-    "Sí, tengo un perro y un gato.",
-    "¿Cuál es tu fiesta favorita?"
-    "Mi fiesta favorita es el Año Nuevo.",
-    "¿Qué estás planeando para el futuro?"
-    "Planeo viajar más.",
-    "¿Cómo se rompe con los amigos?"
-    "Normalmente digo '¡hasta luego!'"
-    "¿Cómo celebras tu cumpleaños?"
-    "Lo celebro con amigos y familiares."
 ]
 
 # Создаем словарь символов
