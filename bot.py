@@ -9,16 +9,16 @@ char_groups = {
     "english": "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ",
     "empty": "",
     "numbers": "0123456789",
-    "symbols": "!@#$%^&*()_+-=[]{}|;:'\",.<>?/`~",
+    "symbols": "!@#$%^&*()_+-=[]{}|;:'\",.<>?/`~ ",
     "finance": "$£€¢₽₹¥₱₿",
     "math": "+-*/=<>≠≤≥",
     "science": "∞∑∏∫≡≠≈",
-    "programmer": "<>{}[]()#@&|\\"
+    "programmer": "<>{}[]()#@&|\\ "
 }
 
 # Подготовка данных
 texts = [
-    " abcdefghijklmnopqrstuvwxyz ABCDEFGHIJKLMNOPQRSTUVWXYZ абвгдеёжзийклмнопрстуфхцчшщъыьэюя АБВГДЕЁЖЗИЙКЛМНОПРСТУФХЦЧШЩЪЫЬЭЮЯ ¡!@#№$£€¢₽₹¥₱₿%^&()_[]{}:;'\\|/<>¿?,.· 0123456789 +-*=≠≤≥∞∑∏∫≡≈ `~ºª",
+    " abcdefghijklmnopqrstuvwxyz ABCDEFGHIJKLMNOPQRSTUVWXYZ абвгдеёжзийклмнопрстуфхцчшщъыьэюя АБВГДЕЁЖЗИЙКЛМНОПРСТУФХЦЧШЩЪЫЬЭЮЯ ¡!@#№$£€¢₽₹¥₱₿%^&()_[]{}:;'\\|/<>¿?,.· 0123456789 +-*=≠≤≥∞∑∏∫≡≈ `~",
     "",
     "Привет, как дела?",
     "Я хорошо, спасибо!",
@@ -48,6 +48,10 @@ texts = [
     "Я обычно говорю 'до встречи!'",
     "Как ты отмечаешь день рождения?",
     "Я праздную с друзьями и семьей.",
+    "Истина",
+    "Ложь",
+    "Да.",
+    "Нет.",
     "Hi, how are you?",
     "I'm fine, thank you!",
     "What's your favorite color?",
@@ -57,7 +61,7 @@ texts = [
     "What do you do for a living?",
     "I work as a programmer.",
     "Where do you live?",
-    "I live in Moscow.",
+    "I live in Washington.",
     "What's your hobby?",
     "My hobby is photography.",
     "What's your favorite movie?",
@@ -76,6 +80,10 @@ texts = [
     "I usually say 'see you later!'",
     "How do you celebrate your birthday?",
     "I celebrate with friends and family.",
+    "True",
+    "False",
+    "Yes.",
+    "No."
 ]
 
 # Создаем словарь символов
